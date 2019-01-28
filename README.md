@@ -34,7 +34,7 @@ ionize $ ionize github.com selfup fut ssh
 
 1. Clone repo `git clone https://github.com/selfup/ionize`
 2. Have cargo install from local path
-3. `cargo install --path <path_to_repo_you_just_cloned>
+3. `cargo install --path <path_to_repo_you_just_cloned>`
 
 No real need to put this up on https://crates.io just yet!
 
