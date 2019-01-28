@@ -42,15 +42,13 @@ Atleast you get to learn that cargo can install from other sources :smile:
 
 ## Paths
 
-Ionize expects an ENV variable called `IONIZE_PATH` to be set.
+Ionize expects an ENV variable called `IONIZED_PATH` to be set.
 
-If it is not set, it will clone all repos in a specific namespace!
+I like to set mine to `export IONIZED_PATH=$HOME/rustlang`
 
-Default is: `$HOME/rustlang/src/domain/author/repo`
+This follows the golang way of path mitigation.
 
-This follows the golang way of path mitigation. Otherwise feel free to set your own path.
-
-For example you could set: `export IONIZE_PATH=$HOME/workspace`
+For example you could set: `export IONIZED_PATH=$HOME/workspace`
 
 Now you can use `ionize` to install all repos in `$HOME/workspace/src/domain/author/repo` :tada:
 
