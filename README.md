@@ -9,7 +9,7 @@ _or any language really_
 HTTPS:
 
 ```bash
-ionize $ ionize github.com selfup fut
+$ ionize github.com selfup fut
 ---> Protocol is: https
 ---> Ionize is cloning: https://github.com/selfup/fut
 ---> Into: /Users/RJPB2/rustlang/src/github.com/selfup/fut
@@ -19,7 +19,7 @@ ionize $ ionize github.com selfup fut
 SSH
 
 ```bash
-ionize $ ionize github.com selfup fut ssh
+$ ionize github.com selfup fut ssh
 ---> Protocol is: ssh
 ---> Ionize is cloning: git@github.com:selfup/fut
 ---> Into: /Users/RJPB2/rustlang/src/github.com/selfup/fut
