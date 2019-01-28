@@ -1,0 +1,7 @@
+[package]
+name = "ionize"
+version = "0.1.0"
+authors = ["selfup <boudinot.regis@yahoo.com>"]
+license = "MIT"
+
+[dependencies]
