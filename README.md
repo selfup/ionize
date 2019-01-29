@@ -44,6 +44,11 @@ Atleast you get to learn that cargo can install from other sources :smile:
 
 Ionize expects an ENV variable called `IONIZED_PATH` to be set.
 
+If it is not set:
+
+1. On macOS/Linux: `$HOME/rustlang` will be used.
+1. On Windows: `%USERPROFILE&\rustlang` will be used.
+
 I like to set mine to `export IONIZED_PATH=$HOME/rustlang`
 
 This follows the golang way of path mitigation.
@@ -65,5 +70,5 @@ It doesn't have to be rust specific. It's a general helper :smile:
 The domain `github.com` can be:
 
 ```js
-"gitlab.com" || "bitbucket.org" || "my.domain.net"
+'gitlab.com' || 'bitbucket.org' || 'my.domain.net';
 ```
