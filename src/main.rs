@@ -21,7 +21,7 @@ fn main() {
                     ssh = true;
                 }
             }
-            _ => println!("---> Too many arguments! Ignoring extras..."),
+            _ => println!("---> Too many arguments! Ignoring: {}", argument),
         }
 
         arg_idx += 1;
