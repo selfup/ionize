@@ -61,10 +61,20 @@ fn find_ionized_path() -> String {
         home = "USERPROFILE";
     }
 
-    let mut ionized_path = var("IONIZED_PATH").unwrap();
+    let home_dir = var(home).unwrap();
 
-    if ionized_path == "" {
-        ionized_path = format!("{}/rustlang", home);
+    let ionized_path: String;
+
+    match var("IONIZED_PATH") {
+        Ok(path) => ionized_path = path,
+        Err(_) => {
+            println!(
+                "IONIZED_PATH not found, setting default to {}/rustlang",
+                home_dir,
+            );
+
+            ionized_path = format!("{}/rustlang", home_dir);
+        }
     }
 
     ionized_path
