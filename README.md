@@ -1,8 +1,10 @@
 # Ionize
 
-Like `go get` but for Rust!
+A global helper for cloning git repos into namespaced paths.
 
-_or any language really_
+Predictable, easy to use, and flexible.
+
+Clone repos via https (default) or ssh :computer:
 
 ## Examples
 
@@ -12,7 +14,7 @@ HTTPS:
 $ ionize github.com selfup fut
 ---> Protocol is: https
 ---> Ionize is cloning: https://github.com/selfup/fut
----> Into: /Users/RJPB2/rustlang/src/github.com/selfup/fut
+---> Into: /Users/RJPB2/Documents/src/github.com/selfup/fut
 ---> fut has been fetched successfully!
 ```
 
@@ -22,7 +24,7 @@ SSH
 $ ionize github.com selfup fut ssh
 ---> Protocol is: ssh
 ---> Ionize is cloning: git@github.com:selfup/fut
----> Into: /Users/RJPB2/rustlang/src/github.com/selfup/fut
+---> Into: /Users/RJPB2/Documents/src/github.com/selfup/fut
 ---> fut has been fetched successfully!
 ```
 
@@ -46,16 +48,14 @@ Ionize expects an ENV variable called `IONIZED_PATH` to be set.
 
 If it is not set:
 
-1. On macOS/Linux: `$HOME/rustlang` will be used.
-1. On Windows: `%USERPROFILE&\rustlang` will be used.
+1. On macOS/Linux: `$HOME/workspace` will be used.
+1. On Windows: `%USERPROFILE&\workspace` will be used.
 
-I like to set mine to `export IONIZED_PATH=$HOME/rustlang`
+I like to set mine to `export IONIZED_PATH=$HOME/Documents`
 
-This follows the golang way of path mitigation.
+For example you could set: `export IONIZED_PATH=$HOME/Repos`
 
-For example you could set: `export IONIZED_PATH=$HOME/workspace`
-
-Now you can use `ionize` to install all repos in `$HOME/workspace/src/domain/author/repo` :tada:
+Now you can use `ionize` to install all repos in `$HOME/Repos/src/domain/author/repo` :tada:
 
 It doesn't have to be rust specific. It's a general helper :smile:
 

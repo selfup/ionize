@@ -1,6 +1,6 @@
 [package]
 name = "ionize"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["selfup <boudinot.regis@yahoo.com>"]
 license = "MIT"
 

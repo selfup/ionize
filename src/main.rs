@@ -29,7 +29,7 @@ fn main() {
 
     let check = String::from("");
     if domain == check || author == check || repo == check {
-        println!("Make sure to pass all three args!\nionize domain author repo")
+        println!("---> Make sure to pass all three args!\nionize domain author repo")
     } else {
         clone_into_ionized_path(domain, author, repo, ssh)
     }
@@ -69,11 +69,11 @@ fn find_ionized_path() -> String {
         Ok(path) => ionized_path = path,
         Err(_) => {
             println!(
-                "IONIZED_PATH not found, setting default to {}/rustlang",
+                "---> IONIZED_PATH not found, setting default to {}/workspace",
                 home_dir,
             );
 
-            ionized_path = format!("{}/rustlang", home_dir);
+            ionized_path = format!("{}/workspace", home_dir);
         }
     }
 
