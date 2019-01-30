@@ -1,7 +1,8 @@
 [package]
 name = "ionize"
-version = "0.3.0"
+version = "0.3.1"
 authors = ["selfup <boudinot.regis@yahoo.com>"]
 license = "MIT"
+repository = "https://github.com/selfup/ionize"
 
 [dependencies]
