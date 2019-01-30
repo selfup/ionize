@@ -30,6 +30,12 @@ $ ionize github.com selfup fut ssh
 
 ## Install
 
+Currently this uses cargo from rust to facilitate installing.
+
+Binaries will be shipped in the future under releases.
+
+**Normal**: `cargo install ionize`
+
 **From git**: `cargo install --git https://github.com/selfup/ionize.git`
 
 **From path**:
