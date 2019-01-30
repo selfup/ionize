@@ -31,6 +31,8 @@ fn main() {
     if domain == check || author == check || repo == check {
         println!("---> Make sure to pass all three args!");
         println!("---> $ ionize domain author repo");
+    } else if !domain.contains(".") {
+        println!("---> make sure your domain is valid!")
     } else {
         clone_into_ionized_path(domain, author, repo, ssh)
     }
