@@ -2,13 +2,12 @@ use std::env::{args, var};
 use std::process::Command;
 
 fn main() {
-    let mut arg_idx = 0;
-
+    let mut ssh: bool = false;
     let mut domain: String = String::from("");
     let mut author: String = String::from("");
     let mut repo: String = String::from("");
 
-    let mut ssh: bool = false;
+    let mut arg_idx = 0;
 
     for argument in args() {
         match arg_idx {
@@ -28,8 +27,10 @@ fn main() {
     }
 
     let check = String::from("");
+
     if domain == check || author == check || repo == check {
-        println!("---> Make sure to pass all three args!\nionize domain author repo")
+        println!("---> Make sure to pass all three args!");
+        println!("---> $ ionize domain author repo");
     } else {
         clone_into_ionized_path(domain, author, repo, ssh)
     }
