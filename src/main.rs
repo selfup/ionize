@@ -1,4 +1,5 @@
 use std::env::{args, var};
+use std::io::{self, Write};
 use std::process::Command;
 
 fn main() {
@@ -47,14 +48,23 @@ fn clone_into_ionized_path(domain: String, author: String, repo: String, ssh: bo
 
     println!("---> Ionize is cloning: {}\n---> Into: {}", from, into);
 
-    Command::new("git")
+    let output = Command::new("git")
         .arg("clone")
         .arg(from)
         .arg(into)
         .output()
         .expect("Something went wrong trying to fetch the repo");
 
-    println!("---> {} has been fetched successfully!", repo);
+    println!("status: {}", output.status);
+
+    if output.status.success() {
+        println!("{} cloned successfully!", repo);
+    } else {
+        println!("Oh no :( \nSomething went wrong cloning {}!", repo);
+    }
+
+    io::stdout().write_all(&output.stdout).unwrap();
+    io::stderr().write_all(&output.stderr).unwrap();
 }
 
 fn find_ionized_path() -> String {
